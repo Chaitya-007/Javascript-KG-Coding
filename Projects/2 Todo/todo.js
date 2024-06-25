@@ -25,12 +25,10 @@ function displayItems()
     {
         let {item, dueDate} = todoList[i];
         newhtml += `
-        <div>
         <span>${item}</span>
         <span>${dueDate}</span>
         <button onclick="todoList.splice(${i},${1});
         displayItems()">Delete</button>
-        </div>
         `;
     }
 
