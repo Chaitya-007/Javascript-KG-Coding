@@ -1,0 +1,27 @@
+.but-class
+{
+    background-color: yellow;
+}
+
+#but-id
+{
+    background-color: greenyellow;
+}
+
+.task1
+{
+    background-color: rgb(142, 237, 190);
+    border-radius: 10px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.task2
+{
+    border-radius: 6px;
+    width: 250px;
+    border: 2px solid black;
+}

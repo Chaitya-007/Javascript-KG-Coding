@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = 45;
+        let gender = 'male';
+        let findaldiscount;
+        if(age <= 5)
+        {
+            findaldiscount = 100;
+        }
+        else if(gender === 'female' || age <=8)
+        {
+            findaldiscount = 50;
+        }
+        else if(age >= 65)
+        {
+            findaldiscount = 30;
+        }
+        else
+        {
+            findaldiscount = 0;
+        }
+
+        console.log(`Your final discount is ${findaldiscount}`);
+    </script>
+</body>
+</html>

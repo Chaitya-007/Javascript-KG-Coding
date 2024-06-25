@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <button class="but1" onclick="
+    cartquantity += 1;
+    document.querySelector('#heading').
+    innerText = `Your item has ${cartquantity} items`;
+    
+    ">Add to bag</button>
+
+
+    <button class="but2" onclick="
+    cartquantity -= 1;
+    document.querySelector('#heading').
+    innerText = `Your item has ${cartquantity} items`
+    
+    ">Move to Wishlist</button>
+    <button class="but3" onclick="
+    cartquantity += 2;
+    document.querySelector('#heading').
+    innerText = `Your item has ${cartquantity} items`;
+    ">Add 1+1 sale item</button>
+
+    <h1 id ="heading"></h1>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

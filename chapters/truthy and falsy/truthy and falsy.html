@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy and falsy values</title>
+</head>
+<body>
+    <script>
+        let age;
+        console.log(age); // undefined
+        
+        age = 21; // truthy
+        age = 0;
+        age = '';
+        age = 4/'horse';
+        console.log(age); // NaN
+        age = null;
+        console.log(age); // null
+
+       
+        if(age)
+        {
+            console.log(`Age is truthy`);
+        }
+        else 
+        {
+            console.log(`Age is falsy`);
+        }
+    </script>
+</body>
+</html>

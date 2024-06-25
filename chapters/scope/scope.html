@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        /* Variable is defined inside block and cannot be accessed
+        let age = 12;
+    
+        if(age > 18)
+        {
+            let userMessage = 'You can drive';
+            
+        }
+        else
+        {
+            let userMessage = 'Use a Bicycle';
+            
+        }
+
+        console.log(userMessage);
+         Gives error of undefine 
+        */
+
+        /*
+        let age = 12;
+        let userMessage;
+        if(age > 18)
+        {
+            let userMessage = 'You can drive';
+            
+        }
+        else
+        {
+            let userMessage = 'Use a Bicycle';
+            
+        }
+        console.log(userMessage);
+        will print nothing
+        */
+
+        /*
+        Variable can be redefined inside
+        let age = 12;
+        let userMessage;
+        if(age > 18)
+        {
+            let userMessage = 'You can drive';
+            console.log(userMessage);
+        }
+        else
+        {
+            let userMessage = 'Use a Bicycle';
+            console.log(userMessage);
+            
+        }
+        console.log(userMessage);
+        */
+
+        let age = 12;
+        var userMessage;
+        if(age > 18)
+        {
+            var userMessage = 'You can drive';
+            console.log(userMessage);
+        }
+        else
+        {
+            var userMessage = 'Use a Bicycle';
+            console.log(userMessage);
+            
+        }
+        console.log(userMessage);
+
+    </script>
+</body>
+</html>

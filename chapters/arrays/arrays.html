@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        /*
+        let numbers = [1,4,3,7,
+        5,6,7,2];
+        console.log(numbers);
+        console.log(numbers[0]);
+        console.log(typeof numbers);
+
+        let doosra = [1,true, null, 'asdfasd'];
+        console.log(doosra[3]);
+
+        console.log(Array.isArray(doosra));
+
+        let obj = {lkj : 789};
+        console.log(Array.isArray(obj));
+
+        console.log(numbers.length);
+        */
+
+        let arr = [1,2,3];
+        console.log(arr);
+        arr.push(4);
+        console.log(arr);
+
+       let popped = arr.pop();
+        console.log(arr);
+        console.log(popped);
+
+        // adds element in the beginning
+        arr.unshift(0);
+        console.log(arr);
+
+        // removes element from the beginning
+        let popy = arr.shift();
+        console.log(arr);
+
+        let brr = [7,5,8,4,6,12,3];
+        console.log(brr);
+        // splice(starting index, no of elements to be removed)
+        brr.splice(2,2);
+        console.log(brr);
+        //console.log(brr.toString());
+
+        //********************************************************************
+        //By default, the sort() function sorts values as strings. This works well for strings ("Apple" comes before "Banana"). If numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". Because of this, the sort() method will produce incorrect result when sorting numbers.
+        brr.sort();
+        console.log(brr);
+
+        
+        let crr = [7,5,8,1,9,4];
+        console.log(crr);
+        crr.sort();
+        console.log(crr);
+
+        // used to create a copoy of the array
+        console.log(crr.valueOf());
+        crr.reverse();
+        console.log(crr);
+
+        let arr2 = arr;
+        arr2[0] = 100;
+        console.log(arr);
+
+        let [a,b,c] = arr;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+    </script>
+</body>
+</html>

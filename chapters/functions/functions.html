@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        let age = 21;
+        function greet()
+        {
+            console.log(`The age is ${age}`);
+        }
+
+        greet();
+
+        age = 4;
+        greet();
+
+        age = 54;
+        greet();
+
+        function generateRandom()
+        {
+            let random = Math.random();
+            return random;
+        }
+
+      //  console.log(generateRandom());
+       // console.log(generateRandom());
+       // console.log(generateRandom());
+
+        function returnsvalue()
+        {
+            let age = 10;;
+
+            if(age === undefined)
+            {
+                return undefined;
+            }
+
+            return age;
+        }
+
+        // console.log(returnsvalue());
+
+      /*  function sum(a, b)
+        {
+            return a + b;
+        }
+
+        console.log(sum(3, 4));
+        console.log(sum(1, 2));
+        console.log(sum(5, 6));
+        console.log(sum(7, 8));
+        console.log(sum(9, 10));
+       */
+
+        
+       function greeting(name = `Pyaare`)
+       {
+        console.log(`Hello ${name}`);
+       }
+
+       greeting();
+        
+    </script>
+</body>
+</html>

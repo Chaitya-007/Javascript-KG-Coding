@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON,Local Storage, Date & DOM</title>
+    <style>
+        .js-odd
+        {
+            background-color: aqua;
+        }
+        .js-even
+        {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h3 id="heading"></h3>
+
+    <button class="my-button" onclick="
+    incrementcount();
+    updateButton();
+    ">
+    </button>
+
+    <button onclick="
+    reset();
+    ">
+        Reset
+    </button>
+
+
+    <script>
+
+        let click = localStorage.getItem('count') || 0;
+        updateButton();
+        let mydate = new Date();
+        let hrs = mydate.getHours();
+        console.log(hrs);
+
+        greeting('Kanha');
+        //greeting();
+
+        function greeting(person = 'Dear')
+        {
+
+            if(hrs <= 12)
+            {
+                document.querySelector('#heading').innerText = `Good Morning ${person}`;
+            }
+            else if(hrs > 12 && hrs <= 18)
+            {
+                document.querySelector('#heading').innerText = `Good Afternoon ${person}`;;
+            }
+            else
+            {
+                document.querySelector('#heading').innerText =  `Good Night ${person}`;
+            }
+        }
+    
+
+        function incrementcount()
+        {
+            click++;
+            localStorage.setItem('count',click);
+            updateButton();
+        }
+
+        function reset()
+        {
+            localStorage.clear();
+            click = 0;
+            localStorage.setItem('count',click);
+            updateButton();
+        }
+
+
+
+        function updateButton()
+        {
+            const mybutton = document.querySelector('.my-button');
+
+            /*
+            If you use classList.remove('some class name') on an element and the specified class name doesn't exist on the element, nothing happens. The method call will simply be ignored, and no error will be thrown.
+            */
+
+
+            if(click%2 == 0)
+            {
+               mybutton.classList.remove('js-odd');
+               mybutton.classList.add('js-even');
+            }
+            else
+            {
+                mybutton.classList.remove('js-even');
+                mybutton.classList.add('js-odd');
+            }
+
+            document.querySelector('.my-button').
+            innerText = `${click}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+       let myntra = {
+        name: 'Jeans',
+        size: 'S',
+        fit: 'Slim Fit',
+        'delivery-time' : '3 days',
+        
+        isIdenticalProduce: function(obj1, obj2)
+        {
+            //Best Industry experiences
+            //first check wheter both have same type as object
+            if(typeof obj1 !== 'object' || typeof obj2 !== 'object')
+           {
+            console.warn('Both are not objects');
+            return false;
+           }
+            
+            if(obj1 === obj2)
+            {
+                return true;
+            }
+
+            if(obj1.name === obj2.name &&
+             obj1.size === obj2.size && 
+             obj1.fit === obj2.fit &&
+             obj1['delivery-time'] === obj2['delivery-time'])
+             {
+                return true;
+             }
+             else 
+             {
+                return false;
+             }
+            
+        }
+       }; 
+
+       let copyproduct = myntra;
+         console.log(myntra.isIdenticalProduce(myntra, copyproduct));
+         console.log(myntra.isIdenticalProduce('myntra', copyproduct));
+         copyproduct.size = 'L';
+         console.log(myntra);
+         console.log(copyproduct);
+
+         console.log(myntra['delivery-time']);
+
+         let object = {
+            message : 'good job',
+        status : 'complete',
+         };
+
+         let {message, status} = object;
+            console.log(message);
+            console.log(status);
+
+    </script>
+</body>
+</html>

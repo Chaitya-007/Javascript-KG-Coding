@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Functions</title>
+</head>
+<body>
+    <script>
+        function checkOddEven(num)
+        {
+            if(num%2 == 0)
+            {
+                return 'Even';
+            }
+            else{
+                return 'Odd';
+            }
+        }
+
+        function larger(x, y)
+        {
+           return x > y ? x : y;
+        }
+
+        function celsiustofarenheit(celsius)
+        {
+            return (celsius * 9/5) + 32;
+        }
+
+        console.log(checkOddEven(52));
+        console.log(larger(5, 10));
+        console.log(celsiustofarenheit(32));
+    </script>
+</body>
+</html>

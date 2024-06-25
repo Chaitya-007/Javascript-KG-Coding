@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        let product = {
+          company : 'Mango',
+          price : 861,
+          'item-name' : 'T-shirt', // property name with hyphen can also be defined like this if it does not follows the rules of variable naming  
+          displayPrice: function()
+          {
+            console.log(`The price of the product is ${this.price}`);
+            console.log(`The name of the item is ${product['item-name']}`);
+          }
+        };
+
+        //console.log(product); // {} if empty
+        // console.log(typeof product); // object
+       // console.log(product.company);
+        // console.log(product.price);
+        // console.log(product.item_name);
+        // product.company = 'Banana';
+        // console.log(product);
+
+        // Bracket notation
+        // Useful when you want to access a property which is not a valid name
+        // console.log(product['company']);
+        // console.log(product['item-name']);
+
+        // another application of bracket notation
+        // let propertyName = 'item-name';
+        // console.log(product[propertyName]);
+
+        // deleting values
+        // delete product.company;
+        // console.log(product);
+
+        // 2nd way
+        //delete product['company'];
+        //console.log(product);
+
+        // calling function
+        //product.displayPrice();
+
+        // autoboxing
+        //console.log('Hey this is Chaitya Speaking'.length);
+        //console.log('Hey this is Chaitya Speaking'.toUpperCase());
+
+        // refrencing and derefrencing
+        //let a = 5;
+        //let b = a;
+        //console.log(`a = ${a}, b = ${b}`);
+        //a = 8;
+        //console.log(`a = ${a}, b = ${b}`);
+
+        //let p = {num: 101};
+        //let q = p;
+        //console.log(`p = ${p.num}, q = ${q.num}`);
+        //p.num = 202;
+        //console.log(`p = ${p.num}, q = ${q.num}`);
+
+        //let j = {pop: 'ujhi'};
+        //let i = {pop: 'ujhi'};
+
+        //console.log(j == i); // false
+        //console.log(j === i); // false
+
+        //Destructuring
+       // let othername = product.company
+        // console.log(othername);
+
+        // smae name as propery name should be used only
+        //let {company, price} = product;
+        //console.log(company);
+        //console.log(price);
+        
+        
+
+    </script>
+</body>
+</html>

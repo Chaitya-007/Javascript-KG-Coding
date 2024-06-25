@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Arrays and Loops</title>
+</head>
+<body>
+    <script>
+        let arr = [5,6];
+        arr.unshift(4);
+        arr.push(7);
+        console.log(arr);
+
+        function returnatposition(arr, position)
+        {
+            return arr[position - 1];
+        }
+
+        let pos = returnatposition(arr,2);
+        console.log(pos);
+
+        let n = arr.length;
+        let brr = arr.slice(0,n);
+        brr[0] = null;
+        console.log(arr);
+        console.log(brr);
+
+        function prime(n)
+        {
+            let cnt = 0;
+            for(let i = 1; i <= Math.sqrt(n); i++)
+            {
+                if(n%i == 0)
+                {
+                    cnt++;
+                    if(n/i != i)
+                    {
+                        cnt++;
+                    }
+                }
+
+                if(cnt > 2)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        let count = 0;
+        let i = 1;
+        while(true)
+        {
+            if(prime(i))
+            {
+                count++;
+                console.log(`Prime number found is  ${i} `);
+            }
+            i++;
+            if(count == 5)
+            {
+                break;
+            }
+        }
+
+        for(let i = 10; i >= 1; i--)
+        {
+            console.log(i);
+        }
+
+        let crr = [1,-6,5,7,-98];
+
+        for(let k = 0; k <= crr.length; k++)
+        {
+            if(crr[k] > 0)
+            {
+                console.log(crr[k]);
+            }
+            else
+            {
+                continue;
+            }
+        }
+
+        let drr = ['KG', 'Coding', 'Javasript', 'Course', 'is', 'Best'];
+        let str = '';
+
+        for(let f = 0; f < drr.length; f++)
+        {
+           str += drr[f] + ' ';
+        }
+
+        console.log(str);
+
+        // Joining method of array
+        console.log(drr.join(","));
+    </script>
+</body>
+</html>
