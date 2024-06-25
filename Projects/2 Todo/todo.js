@@ -1,4 +1,4 @@
-let todoList = [];
+let todoList = [{item : 'milk', dueDate: '2024-06-07'},{item : 'farsan', dueDate: '2024-05-07'}];
 //whenver page will be reloaded all lists will be displayed
 displayItems();
 
@@ -27,7 +27,7 @@ function displayItems()
         newhtml += `
         <span>${item}</span>
         <span>${dueDate}</span>
-        <button onclick="todoList.splice(${i},${1});
+        <button class="btn-delete" onclick="todoList.splice(${i},${1});
         displayItems()">Delete</button>
         `;
     }
