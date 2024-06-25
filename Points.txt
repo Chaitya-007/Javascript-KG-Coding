@@ -1,0 +1,2 @@
+1] First extract the element using document.querySelector and save it to an element.
+2] Then perform the operations
