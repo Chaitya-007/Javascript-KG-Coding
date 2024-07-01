@@ -6,7 +6,20 @@
     <title>Advance</title>
 </head>
 <body>
+
+    <button id="my-button">Click Me</button>
     <script>
+        /*
+        Started EventListener
+        */
+        let buttonElement = document.querySelector('#my-button');
+
+        let printmsg = event => console.log(`I'm print`);
+
+        buttonElement.addEventListener('click', printmsg);
+
+
+
         /*
         Anonymous Function as Values
        let sum = function(num1, num2)
@@ -71,6 +84,7 @@
     //clearInterval(intervalId);
     setTimeout(() => clearInterval(intervalId), 8000);
     */
+
 
     </script>
 </body>
