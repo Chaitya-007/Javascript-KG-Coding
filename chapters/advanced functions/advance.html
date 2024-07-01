@@ -11,12 +11,18 @@
     <script>
         /*
         Started EventListener
-        */
         let buttonElement = document.querySelector('#my-button');
-
+        
         let printmsg = event => console.log(`I'm print`);
-
+        
         buttonElement.addEventListener('click', printmsg);
+        
+        let printdate = event => console.log(new Date());
+        
+        buttonElement.addEventListener('click', printdate);
+        
+        buttonElement.removeEventListener('click', printmsg);
+        */
 
 
 
