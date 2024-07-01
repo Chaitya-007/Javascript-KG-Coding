@@ -31,28 +31,46 @@
        */
 
        /* Arrow Functions
-       */
-
+       
        let sum = (num1,num2) => 
        {
         return num1 + num2;
-       }
-
-       console.log(sum(3,5));
-
-       let sum2 = (num1, num2) => num1 + num2;
-
-       console.log(sum2(4,5));
-
-       let square = num => {
+    }
+    
+    console.log(sum(3,5));
+    
+    let sum2 = (num1, num2) => num1 + num2;
+    
+    console.log(sum2(4,5));
+    
+    let square = num => {
         return num*num;
-       }
+    }
+    
+    console.log(square(5));
+    
+    let square2 = num => num*num;
+    
+    console.log(square2(6));
+    */
 
-       console.log(square(5));
+    /* 
+    setTimeout and setInterval functions
+    let alarm = function()
+    {
+        console.log(`Wake up! its ${new Date()}`);
+    }
 
-       let square2 = num => num*num;
-
-       console.log(square2(6));
+    let timerId = setTimeout(alarm, 5000);
+    
+    console.log(`Alarm set with timer Id : ${timerId}`);
+    
+    clearTimeout(timerId);
+    
+    let intervalId = setInterval(alarm, 1000);
+    //clearInterval(intervalId);
+    setTimeout(() => clearInterval(intervalId), 8000);
+    */
 
     </script>
 </body>
