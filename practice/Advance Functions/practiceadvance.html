@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practice Advance Functions</title>
+    <style>
+        .btn-class
+        {
+            font-size: 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            width: 150px;
+            height: 50px;
+        }
+
+        .grow
+        {
+            width: 300px;
+            height: 100px;;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <button id="btn" class="btn-class">
+        Subscribe
+    </button>
+
+    <script>
+        let mul = (num1, num2) => num1*num2;
+
+        console.log(mul(5,6));
+
+        let fun = () => console.log('Hello World');
+
+        let runtwice = inputfunction =>
+        {
+            inputfunction();
+            inputfunction();
+        }
+
+       runtwice(fun);
+
+       let buttonelement = document.querySelector('#btn');
+       let change = false;
+
+       let addclass = () => buttonelement.classList.add('grow');
+
+       let removeclass = () => buttonelement.classList.remove('grow');
+
+       function increase()
+       {
+            console.log(`before change: ${change}`);
+           change = !change;
+           console.log(`after change: ${change}`);
+           change ?  setTimeout(addclass, 2000) : removeclass();
+       }
+
+       buttonelement.addEventListener('click',increase);
+
+
+       let arr = [1,2,3,4,5,6,7,8,9];
+
+       let sum = () => {
+
+        let sumtotal = 0;
+
+        arr.forEach( num => sumtotal += num);
+
+        return sumtotal;
+       }
+
+       let maparray = arr.map(val => val*val);
+
+       console.log(maparray);
+
+       console.log(sum());
+    </script>
 </body>
 </html>
