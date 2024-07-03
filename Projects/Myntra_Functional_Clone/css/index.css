@@ -189,7 +189,7 @@ header {
     font-weight: 700;
 }
 
-.category-items {
+.category-items, .items-container {
     width: 80%;
     margin: 50px 10%;
     display: flex;
@@ -238,9 +238,10 @@ header {
     margin: 40px 10%;
 }
 
-.items-container
+.item-container
 {
  width: 250px;
+ margin: 10px;
 }
 
 .item-image
@@ -323,4 +324,6 @@ width: 100%;
     border: none;
     border-radius: 6px;
     padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
 }
