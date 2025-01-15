@@ -1,0 +1,16 @@
+arr.push(value); // enters from back
+arr.pop(); // pops from back
+arr.unshift(value) // enters from front
+arr.shift() // pops from front
+arr.length 
+arr.splice(start_indx,no_of_elements)
+arr.sort() // sort in string form i.e "25" > "100" because '2' > '1'
+arr.includes(values)
+arr.reverse()
+arr.join("") // put split value
+arr.split("")
+
+for(let char of str.toLowerCase())
+{
+
+}
